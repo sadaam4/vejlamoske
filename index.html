@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+<head><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta charset="utf-8"/>
+<title>Salah</title>
+<script src="flip_clock.js"></script>
+<script src="flip_clock_salah.js"></script>
+<script src="salahdatemodule.js"></script>
+<script src="salahfunctions.js"></script>
+<script src="lysavis.js"></script>
+<link href="salahstyles.css" rel="stylesheet" type="text/css"/>
+<script>
+	//Copyright Yasser Tallouzi
+	window.onload = function() {
+		initData();
+		drawTop();
+		init();
+		drawTimeLeft();
+		startSalahView();
+		initLysAvis();
+
+	}
+</script>
+</head>
+<body>
+<div id="top" style="width: 102%;"></div>
+<table id="maintable" style="width: 103%;">
+<tr>
+<td colspan="3" style="height: 15px;"></td>
+</tr>
+<tr>
+<td style="width: 25%;">
+<canvas class="salahClock" height="210" id="shuruqClock" width="365"></canvas>
+</td>
+<td style="width: 40%; vertical-align: top; text-align: center;">
+<canvas height="235" id="clock" width="690"></canvas>
+</td>
+<td style="width: 25%; text-align: right;">
+<canvas class="salahClock" height="210" id="fajrClock" width="365"></canvas>
+</td>
+</tr>
+<tr>
+<td colspan="3" style="width: 100%; height: 90px; text-align: center; vertical-align: top; padding:10px 0px 0px 0px;">
+<canvas class="salahClock" height="50" id="status" width="950"></canvas>
+</td>
+</tr>
+<tr>
+<td colspan="3">
+<table style="width: 100%;">
+<tr>
+<td style="width: 25%; text-align: left;">
+<canvas class="salahClock" height="210" id="ishaaClock" width="365"></canvas>
+</td>
+<td style="width: 25%; text-align: center;">
+<canvas class="salahClock" height="210" id="magribClock" width="365"></canvas>
+</td>
+<td style="width: 25%; text-align: center;">
+<canvas class="salahClock" height="210" id="asrClock" width="365"></canvas>
+</td>
+<td style="width: 25%; text-align: right;">
+<canvas class="salahClock" height="210" id="duhurClock" width="365"></canvas>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td colspan="3" style="height: 0px;"></td>
+</tr>
+<tr>
+<td colspan="3">
+<div id="ticker">
+<input id="fileinput" type="file"/> عربي <input onclick=" document.getElementById('ticker').hidden='hidden';" type="BUTTON" value="Skjul"/>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="3">
+<div id="Danskticker">
+<input id="fileinput3" type="file"> Dansk <input onclick=" document.getElementById('Danskticker').hidden='hidden';" type="BUTTON" value="Skjul"/>
+</input></div>
+</td>
+</tr>
+</table>
+</body>
+</html>

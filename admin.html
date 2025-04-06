@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Salah</title>
+<link rel="stylesheet" type="text/css" href="salahstyles.css" />
+<script>
+	//Copyright Yasser Tallouzi
+	window.onload = function() {
+		if (localStorage["hijriAdjustment"]) {
+		   	document.getElementById('hijriAdjustment').value = localStorage["hijriAdjustment"];
+    	  }
+    	if (localStorage["fredagsSalah"]) {
+    		document.getElementById('fredagsSalah').value = localStorage["fredagsSalah"];
+    	}
+};
+function AnEventHasOccurred() {
+	localStorage["hijriAdjustment"] =  document.getElementById("hijriAdjustment").value ;
+	localStorage["fredagsSalah"] =  document.getElementById("fredagsSalah").value;
+	
+	
+};
+</script>
+
+</head>
+<body>
+<form id="localStorageSettings" method="post" action="">
+	 <div id="wrapper" style="width: 100%;text-align:left; margin:auto; font-size: 40px;" >
+	 	 
+		 <div style="padding:20px 0px 0px 200px;" > 
+			<label style="color: white; padding:0px 30px 0px 0px;">Hijri adjustment:</label>
+			<input  style="width: 75px; font-size: 40px;"  type='number'  name="hijriAdjustment" id="hijriAdjustment"  onchange="AnEventHasOccurred()" value="0"  />
+		</div>
+		<div  style="padding:20px 0px 0px 200px;" > 
+			<label style="color: white" >Fredags salah:</label>
+			<select name="fredagsSalah"  id="fredagsSalah" style="width: 150px; font-size: 40px" onchange="AnEventHasOccurred()">
+		  			<option value="12:00">12:00</option>
+					  <option value="12:30">12:30</option>
+					  <option value="13:00">13:00</option>
+					  <option value="13:30">13:30</option>
+					  <option value="14:00">14:00</option>
+					  <option value="14:30">14:30</option>
+			</select>
+		</div>
+		 <div style="padding:20px 0px 0px 550px;">
+			<a href="index.html" >
+				<img src="ok.jpg" alt="back" height="42" width="42" style="opacity:0.7;">
+			</a> 
+		</div>
+	</div>
+	
+
+</form>
+</body>
+</html>
