@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="utf-8" />
 <title>Salah</title>
 
@@ -24,83 +23,38 @@
 	}
 </script>
 
-<style>
-@media (max-width: 768px) {
-  marquee {
-    font-size: 1em !important;
-    padding: 5px;
-  }
-  .container, .content, body {
-    padding: 10px;
-    margin: 0;
-    width: 100%;
-    box-sizing: border-box;
-  }
-}
-</style>
 
 <style>
-/* Sidebar Styles */
-.sidebar {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1000;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.3s;
-  padding-top: 60px;
-}
-.sidebar a {
-  padding: 10px 20px;
-  text-decoration: none;
-  font-size: 1.2em;
-  color: white;
-  display: block;
-  transition: 0.3s;
-}
-.sidebar a:hover {
-  background-color: #575757;
-}
-.sidebar .closebtn {
-  position: absolute;
-  top: 10px;
-  right: 25px;
-  font-size: 2em;
-  margin-left: 50px;
-}
-.openbtn {
-  font-size: 1.5em;
-  cursor: pointer;
-  background-color: #111;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  z-index: 1001;
-}
-@media (min-width: 769px) {
-  .openbtn {
-    display: none;
+@media (max-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  marquee {
+    width: 100%;
+    font-size: 1em !important;
+    padding: 10px;
+  }
+
+  .main-content, .content, .container {
+    width: 100% !important;
+    padding: 10px;
+    text-align: center;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
   }
 }
 </style>
 </head>
 <body>
-
-<div id="mySidebar" class="sidebar">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-  <a href="#">الرئيسية</a>
-  <a href="#">عن المسجد</a>
-  <a href="#">مواقيت الصلاة</a>
-  <a href="#">التواصل</a>
-</div>
-<button class="openbtn" onclick="openNav()">☰ القائمة</button>
-
 	<div id="top" style="width: 102%;"></div>
 	<table id='maintable' style="width: 103%;">
 		<tr>
@@ -177,15 +131,6 @@
 	الله | الرحمن | الرحيم | الملك | القدوس | السلام | المؤمن | المهيمن | العزيز | الجبار | المتكبر | الخالق | البارئ | المصور | الغفار | القهار | الوهاب | الرزاق | الفتاح | العليم | القابض | الباسط | الخافض | الرافع | المعز | المذل | السميع | البصير | الحكم | العدل | اللطيف | الخبير | الحليم | العظيم | الغفور | الشكور | العلي | الكبير | الحفيظ | المقيت | الحسيب | الجليل | الكريم | الرقيب | المجيب | الواسع | الحكيم | الودود | المجيد | الباعث | الشهيد | الحق | الوكيل | القوي | المتين | الولي | الحميد | المحصي | المبدئ | المعيد | المحيي | المميت | الحي | القيوم | الواجد | الماجد | الواحد | الأحد | الصمد | القادر | المقتدر | المقدم | المؤخر | الأول | الآخر | الظاهر | الباطن | الوالي | المتعالي | البر | التواب | المنتقم | العفو | الرءوف | مالك الملك | ذو الجلال والإكرام | المقسط | الجامع | الغني | المغني | المانع | الضار | النافع | النور | الهادي | البديع | الباقي | الوارث | الرشيد | الصبور
 </marquee>
 
-
-<script>
-function openNav() {
-  document.getElementById("mySidebar").style.width = "250px";
-}
-function closeNav() {
-  document.getElementById("mySidebar").style.width = "0";
-}
-</script>
 </body>
 </html>
 
