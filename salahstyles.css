@@ -131,25 +131,3 @@ border-radius:25px;
       height:320px;
       /*border:solid black 1px;*/
       }
-
-
-body {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
-
-img, canvas, iframe, video {
-    max-width: 100%;
-    height: auto;
-}
-
-.container, .content, .main {
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    padding: 10px;
-}
