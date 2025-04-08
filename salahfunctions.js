@@ -9,14 +9,14 @@ var hijriAdjustment = localStorage["hijriAdjustment"];
 var fredagsSalah = localStorage["fredagsSalah"];
 
 function drawTop() {
-	//  document.getElementById('top').style.fontSize= 20 *  window.innerWidth / standardWindowWidth+"px";
+	//  document.getElementById('top').style.fontSize= 40 *  window.innerWidth / standardWindowWidth+"px";
 	document.getElementById('top').style.fontSize = "50px";
 	document.getElementById('top').innerHTML =
 
 	' <table style="width: 100%;"><tr>' +
 	//'<div class="table1"  >'+writeIslamicDate(-1)+'</div>'+
 	'<td  style="width: 40%; text-align: left;">' + getDateString() + '</td>'
-			+ '<td  style="width: 10%; text-align: center;" >  VEJLE MOSKE </td>'
+			+ '<td style="width: 10%; text-align: center; font-size: 30px;">VEJLE MOSKE</td>'
 			+ '<td  style="width: 10%; text-align: right;" >'
 			+ writeIslamicDate(hijriAdjustment) + '</td>' + '</tr></table>  ';
 
