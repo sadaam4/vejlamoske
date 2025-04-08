@@ -16,8 +16,8 @@ function drawTop() {
 	' <table style="width: 100%;"><tr>' +
 	//'<div class="table1"  >'+writeIslamicDate(-1)+'</div>'+
 	'<td  style="width: 40%; text-align: left;">' + getDateString() + '</td>'
-			+ '<td style="width: 10%; text-align: center; font-size: 30px;">VEJLE MOSKE</td>'
-			+ '<td  style="width: 10%; text-align: right;" >'
+			+ '<td style="width: 20%; text-align: center; font-size: 40px;">VEJLE MOSKE</td>'
+			+ '<td  style="width: 40%; text-align: right;" >'
 			+ writeIslamicDate(hijriAdjustment) + '</td>' + '</tr></table>  ';
 
 	setTimeout(function() {
