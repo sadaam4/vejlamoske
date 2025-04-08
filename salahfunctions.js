@@ -10,10 +10,10 @@ var fredagsSalah = localStorage["fredagsSalah"];
 
 function drawTop() {
 	//  document.getElementById('top').style.fontSize= 40 *  window.innerWidth / standardWindowWidth+"px";
-	document.getElementById('top').style.fontSize = "50px";
+	document.getElementById('top').style.fontSize = "25px";
 	document.getElementById('top').innerHTML =
 
-	' <table style="width: 75%;"><tr>' +
+	' <table style="width: 100%;"><tr>' +
 	//'<div class="table1"  >'+writeIslamicDate(-1)+'</div>'+
 	'<td  style="width: 40%; text-align: left;">' + getDateString() + '</td>'
 			+ '<td  style="width: 10%; text-align: center;" >  VEJLE MOSKE </td>'
