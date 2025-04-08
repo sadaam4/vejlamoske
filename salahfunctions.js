@@ -16,7 +16,7 @@ function drawTop() {
 	' <table style="width: 100%;"><tr>' +
 	//'<div class="table1"  >'+writeIslamicDate(-1)+'</div>'+
 	'<td  style="width: 40%; text-align: left;">' + getDateString() + '</td>'
-			+ '<td  style="width: 20%; text-align: center;" >  Vejle Mosque </td>'
+			+ '<td  style="width: 20%; text-align: center;" >  VEJLE MOSKE </td>'
 			+ '<td  style="width: 40%; text-align: right;" >'
 			+ writeIslamicDate(hijriAdjustment) + '</td>' + '</tr></table>  ';
 
