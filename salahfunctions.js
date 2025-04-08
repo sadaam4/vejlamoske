@@ -9,8 +9,8 @@ var hijriAdjustment = localStorage["hijriAdjustment"];
 var fredagsSalah = localStorage["fredagsSalah"];
 
 function drawTop() {
-	//  document.getElementById('top').style.fontSize= 40 *  window.innerWidth / standardWindowWidth+"px";
-	document.getElementById('top').style.fontSize = "25px";
+	//  document.getElementById('top').style.fontSize= 20 *  window.innerWidth / standardWindowWidth+"px";
+	document.getElementById('top').style.fontSize = "50px";
 	document.getElementById('top').innerHTML =
 
 	' <table style="width: 100%;"><tr>' +
