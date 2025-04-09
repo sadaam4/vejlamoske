@@ -1,8 +1,10 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="ar">
 <head>
-<meta charset="utf-8" />
-<title>Salah</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salah</title>
 
 <script src='flip_clock.js'></script>
 <script src='flip_clock_salah.js'></script>
@@ -10,82 +12,102 @@
 <script src='salahfunctions.js'></script>
 <script src='lysavis.js'></script>
 <link rel="stylesheet" type="text/css" href="salahstyles.css" />
+
 <script>
-	//Copyright Yasser Tallouzi
-	window.onload = function() {
+	window.onload = function () {
 		initData();
 		drawTop();
 		init();
 		drawTimeLeft();
 		startSalahView();
 		initLysAvis();
-
 	}
 </script>
 
+<style>
+	.flex-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		gap: 15px;
+		margin-top: 30px;
+	}
+
+	.canvas-wrapper {
+		flex: 1 1 300px;
+		display: flex;
+		justify-content: center;
+	}
+
+	#status {
+		display: block;
+		margin: 20px auto;
+		max-width: 950px;
+		width: 100%;
+		height: auto;
+	}
+
+	.marquee-spacer {
+		height: 30px;
+	}
+
+	marquee {
+		width: 100%;
+		display: block;
+	}
+
+
+@media (max-width: 768px) {
+    canvas {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    marquee {
+        font-size: 2em;
+    }
+}
+
+</style>
 </head>
+
 <body>
-	<div id="top" style="width: 102%;"></div>
-	<table id='maintable' style="width: 103%;">
-		<tr>
-			<td colspan=3 style="height: 15px;" />
-		</tr>
-		
-		
-		
-		<tr>
-			<td style="width: 25%;">
-				<canvas id="shuruqClock" class='salahClock' width="365" height="210"></canvas>
-			</td>
-			<td style="width: 40%; vertical-align: top; text-align: center;">
-				<canvas id="clock" width="690" height="235"></canvas>
-			</td>
-			<td style="width: 25%; text-align: right;">
-				<canvas id="fajrClock" class="salahClock" width="365" height="210"></canvas>
-			</td>
-		</tr>
-	<tr>
-			<td colspan=3
-				style="width: 100%; height: 90px; text-align: center; vertical-align: top; padding:10px 0px 0px 0px;">
-				<canvas id="status" class='salahClock' 
-					width="950" height="50"></canvas>
-			</td>
-		</tr>
+	<div id="top"></div>
 	
-		<tr>
-			<td colspan=3>
-				<table style="width: 100%;">
-					<tr>
-						<td style="width: 25%; text-align: left;">
-							<canvas id="ishaaClock" class='salahClock' width="365"
-								height="210"></canvas>
-						</td>
-						<td style="width: 25%; text-align: center;">
-							<canvas id="magribClock" class='salahClock' width="365"
-								height="210"></canvas>
-						</td>
-						<td style="width: 25%; text-align: center;">
-							<canvas id="asrClock" class='salahClock' width="365" height="210"></canvas>
-						</td>
-						<td style="width: 25%; text-align: right;">
-							<canvas id="duhurClock" class='salahClock' width="365"
-								height="210"></canvas>
-						</td>
-					</tr>
-				</table>
-
-			</td>
-		</tr>
-		<marquee behavior="scroll" direction="right" scrollamount="4"
-    style="color: red; background-color: white; font-size: 3.5em; padding: 10px; margin-top: 60px; width: 105%; display: block;">
-    الله | الرحمن | الرحيم | الملك | القدوس | السلام | المؤمن | المهيمن | العزيز | الجبار | المتكبر | الخالق | البارئ | المصور | الغفار | القهار | الوهاب | الرزاق | الفتاح | العليم | القابض | الباسط | الخافض | الرافع | المعز | المذل | السميع | البصير | الحكم | العدل | اللطيف | الخبير | الحليم | العظيم | الغفور | الشكور | العلي | الكبير | الحفيظ | المقيت | الحسيب | الجليل | الكريم | الرقيب | المجيب | الواسع | الحكيم | الودود | المجيد | الباعث | الشهيد | الحق | الوكيل | القوي | المتين | الولي | الحميد | المحصي | المبدئ | المعيد | المحيي | المميت | الحي | القيوم | الواجد | الماجد | الواحد | الأحد | الصمد | القادر | المقتدر | المقدم | المؤخر | الأول | الآخر | الظاهر | الباطن | الوالي | المتعالي | البر | التواب | المنتقم | العفو | الرءوف | مالك الملك | ذو الجلال والإكرام | المقسط | الجامع | الغني | المغني | المانع | الضار | النافع | النور | الهادي | البديع | الباقي | الوارث | الرشيد | الصبور
-</marquee>
-	</table>
-
-<marquee behavior="scroll" direction="left" scrollamount="4"
-    style="color: white; background-color: black; font-size: 3.5em; padding: 10px; margin-top: 10px; width: 105%; display: block;">
-    Vejle Moske Konto nr.9570-11924379  mobilpay 86942 (Islamisk Begravelsesforening konto nr. 0758-3230086299)
-</marquee>
-
-</body>
-</html>
+	<div class="flex-container">
+		<div class="canvas-wrapper"><canvas id="shuruqClock" class="salahClock" width="365" height="210"></canvas></div>
+		<div class="canvas-wrapper"><canvas id="clock" width="690" height="235"></canvas></div>
+		<div class="canvas-wrapper"><canvas id="fajrClock" class="salahClock" width="365" height="210"></canvas></div>
+	</div>
+	
+	<canvas id="status" class="salahClock" width="950" height="50"></canvas>
+	
+	<div class="flex-container">
+		<div class="canvas-wrapper"><canvas id="ishaaClock" class="salahClock" width="365" height="210"></canvas></div>
+		<div class="canvas-wrapper"><canvas id="magribClock" class="salahClock" width="365" height="210"></canvas></div>
+		<div class="canvas-wrapper"><canvas id="asrClock" class="salahClock" width="365" height="210"></canvas></div>
+		<div class="canvas-wrapper"><canvas id="duhurClock" class="salahClock" width="365" height="210"></canvas></div>
+	</div>
+	
+	<marquee behavior="scroll" direction="right" scrollamount="4"
+		style="color: red; background-color: white; font-size: 3.5em; padding: 10px; margin-top: 40px;">
+		الله | الرحمن | الرحيم | الملك | القدوس | السلام | المؤمن | المهيمن | العزيز | الجبار | المتكبر | الخالق |
+		البارئ | المصور | الغفار | القهار | الوهاب | الرزاق | الفتاح | العليم | القابض | الباسط | الخافض | الرافع |
+		المعز | المذل | السميع | البصير | الحكم | العدل | اللطيف | الخبير | الحليم | العظيم | الغفور | الشكور | العلي |
+		الكبير | الحفيظ | المقيت | الحسيب | الجليل | الكريم | الرقيب | المجيب | الواسع | الحكيم | الودود | المجيد |
+		الباعث | الشهيد | الحق | الوكيل | القوي | المتين | الولي | الحميد | المحصي | المبدئ | المعيد | المحيي |
+		المميت | الحي | القيوم | الواجد | الماجد | الواحد | الأحد | الصمد | القادر | المقتدر | المقدم | المؤخر | الأول
+		| الآخر | الظاهر | الباطن | الوالي | المتعالي | البر | التواب | المنتقم | العفو | الرءوف | مالك الملك | ذو
+		الجلال والإكرام | المقسط | الجامع | الغني | المغني | المانع | الضار | النافع | النور | الهادي | البديع |
+		الباقي | الوارث | الرشيد | الصبور
+	</marquee>
+	
+	<div class="marquee-spacer"></div>
+	
+	<marquee behavior="scroll" direction="left" scrollamount="4"
+		style="color: white; background-color: black; font-size: 3.5em; padding: 10px;">
+		Vejle Moske Konto nr.9570-11924379 mobilpay 86942 (Islamisk Begravelsesforening konto nr. 0758-3230086299)
+	</marquee>
+	</body>
+	</html>
+	
