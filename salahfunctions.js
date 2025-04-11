@@ -6,7 +6,7 @@ var lastSalahDate;
 var azanStarted = false;
 var nextSalah = 0;
 var hijriAdjustment = localStorage["hijriAdjustment"];
-var fredagsSalah = localStorage["fredagsSalah"];
+var fredagsSalah = localStorage["fredagsSalah"] || "130:30";
 
 function drawTop() {
 	//  document.getElementById('top').style.fontSize= 40 *  window.innerWidth / standardWindowWidth+"px";
